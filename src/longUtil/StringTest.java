@@ -19,9 +19,15 @@ import com.pactera.sms.foundbase.util.SecurityUtil;
 public class StringTest {
 
 	public static void main(String[] args) {
-		strHash();
+		strDate();
 	}
 	
+	public static void strDate() {
+		String fileCreTime = "2018-01-01 01:01:01.0";
+		fileCreTime = fileCreTime.replaceAll(":", "").replaceAll(" ", "_");
+		fileCreTime = fileCreTime.substring(0, fileCreTime.length() - 2);
+		System.out.println(fileCreTime);
+	}
 	
 	public static void strHash() {
 		String a = "ABCDEa123abc";
