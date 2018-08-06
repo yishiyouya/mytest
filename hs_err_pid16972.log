@@ -1,0 +1,137 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 1396736 bytes for card table expansion
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3331), pid=16972, tid=0x00004094
+#
+# JRE version:  (8.0_144-b01) (build )
+# Java VM: Java HotSpot(TM) Client VM (25.144-b01 mixed mode, sharing windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0053f000):  JavaThread "Unknown thread" [_thread_in_vm, id=16532, stack(0x00b60000,0x00bb0000)]
+
+Stack: [0x00b60000,0x00bb0000],  sp=0x00baf314,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1aa78b]
+V  [jvm.dll+0x1a2fd8]
+V  [jvm.dll+0x1c253e]
+V  [jvm.dll+0x1630b1]
+V  [jvm.dll+0x915ea]
+V  [jvm.dll+0x91bcd]
+V  [jvm.dll+0x9b1b3]
+V  [jvm.dll+0xa717d]
+V  [jvm.dll+0x9b535]
+V  [jvm.dll+0x9a00c]
+V  [jvm.dll+0xa955b]
+V  [jvm.dll+0x159814]
+V  [jvm.dll+0x17de0b]
+V  [jvm.dll+0xe70e1]
+C  [javaw.exe+0x14d3]
+C  [javaw.exe+0x2047]
+C  [javaw.exe+0xaebf]
+C  [javaw.exe+0xaf49]
+C  [kernel32.dll+0x4ef8c]
+C  [ntdll.dll+0x63628]
+C  [ntdll.dll+0x635fb]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0053f000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=16532, stack(0x00b60000,0x00bb0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x01020000 - 0x01053000 	F:\Java\jdk1.8.0_144\bin\javaw.exe
+0x77960000 - 0x77aa2000 	C:\windows\SYSTEM32\ntdll.dll
+0x75fb0000 - 0x76085000 	C:\windows\system32\kernel32.dll
+0x75bd0000 - 0x75c1b000 	C:\windows\system32\KERNELBASE.dll
+0x75c60000 - 0x75d01000 	C:\windows\system32\ADVAPI32.dll
+0x777e0000 - 0x7788c000 	C:\windows\system32\msvcrt.dll
+0x778a0000 - 0x778b9000 	C:\windows\SYSTEM32\sechost.dll
+0x77730000 - 0x777d2000 	C:\windows\system32\RPCRT4.dll
+0x77ab0000 - 0x77b79000 	C:\windows\system32\USER32.dll
+0x76090000 - 0x760de000 	C:\windows\system32\GDI32.dll
+0x76180000 - 0x7618a000 	C:\windows\system32\LPK.dll
+0x760e0000 - 0x7617d000 	C:\windows\system32\USP10.dll
+0x74820000 - 0x749be000 	C:\windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+0x76880000 - 0x768d7000 	C:\windows\system32\SHLWAPI.dll
+0x77940000 - 0x7795f000 	C:\windows\system32\IMM32.DLL
+0x76300000 - 0x763cc000 	C:\windows\system32\MSCTF.dll
+0x5e1f0000 - 0x5e2af000 	F:\Java\jdk1.8.0_144\jre\bin\msvcr100.dll
+0x57930000 - 0x57cfe000 	F:\Java\jdk1.8.0_144\jre\bin\client\jvm.dll
+0x70150000 - 0x70157000 	C:\windows\system32\WSOCK32.dll
+0x76460000 - 0x76495000 	C:\windows\system32\WS2_32.dll
+0x77890000 - 0x77896000 	C:\windows\system32\NSI.dll
+0x73870000 - 0x738a2000 	C:\windows\system32\WINMM.dll
+0x74d90000 - 0x74d99000 	C:\windows\system32\VERSION.dll
+0x76190000 - 0x76195000 	C:\windows\system32\PSAPI.DLL
+0x6db50000 - 0x6db5c000 	F:\Java\jdk1.8.0_144\jre\bin\verify.dll
+0x67d10000 - 0x67d31000 	F:\Java\jdk1.8.0_144\jre\bin\java.dll
+0x6db00000 - 0x6db13000 	F:\Java\jdk1.8.0_144\jre\bin\zip.dll
+0x736c0000 - 0x737ab000 	C:\windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Xms1024m -Xmx1024m -Dfile.encoding=UTF-8 
+java_command: invoke.AopTest
+java_class_path (initial): F:\Java\jdk1.8.0_144\jre\lib\resources.jar;F:\Java\jdk1.8.0_144\jre\lib\rt.jar;F:\Java\jdk1.8.0_144\jre\lib\jsse.jar;F:\Java\jdk1.8.0_144\jre\lib\jce.jar;F:\Java\jdk1.8.0_144\jre\lib\charsets.jar;F:\Java\jdk1.8.0_144\jre\lib\jfr.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\access-bridge.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;F:\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;F:\sts_work\MyTest\target\classes;F:\sts_work\MyTest\lib\tomcat-embed-core-7.0.42.jar;F:\sts_work\MyTest\lib\commons-codec-1.10.jar;F:\sts_work\MyTest\lib\cglib-full-2.0.2.jar;F:\sts_work\MyTest\lib\jedis-2.6.1.jar;E:\Web\MavenLocal\algs4.jar;F:\sts_work\MyTest\lib\mongo-driver_2.9.0-1-0.2.0.jar;E:\Web\IdeaMaven\repository\org\mongodb\bson\3.6.3\bson-3.6.3.jar;E:\Web\IdeaMaven\repository\com\alibaba\fastjson\1.2.37\fastjson-1.2.37.jar;E:\Web\IdeaMaven\repository\org\mongodb\mongodb-driver\3.6.3\mongodb-driver-3.6.3.jar;E:\Web\IdeaMaven\repository\org\mongodb\mongo-java-driver\3.6.3\mongo-java-driver-3.6.3.jar;E:\Web\IdeaMaven\repository\org\mongodb\mongodb-driver-core\3.6.3\mongodb-driver-core-3.6.3.jar;E:\Web\IdeaMaven\repository\org\springframework\boot\spring-boot-starter-data-mongodb\1.5.6.RELEASE\spring-boot-starter-data-mongodb-1.5.6.RELEASE.jar;E:\Web\IdeaMaven\repository\org\springframework\boot\spring-boot-starter\1.5.6.RELEASE\spring-boot-starter-1.5.6.RELEASE.jar;E:\Web\IdeaMaven\repository\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar;E:\Web\IdeaMaven\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.6.R
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=F:\Java\jdk1.8.0_144
+CLASSPATH=.;C:\ProgramData\Oracle\Java\javapath;D:\SoftWare\IT\Informatica\clients\DT\bin;D:\SoftWare\IT\Informatica\clients\tools\datadirect;D:\SoftWare\IT\Informatica\clients\DeveloperClient\bin;D:\SoftWare\IT\Informatica\clients\tools\odbcdrv;C:\Program Files\Teradata\Teradata Performance Monitor Object 13.10\;C:\Program Files\Teradata\client\13.10\Teradata Parallel Transporter\bin;C:\Program Files\Teradata\client\13.10\Teradata Parallel Transporter\msg;C:\Program Files\Teradata\Client\13.10\pp2\;C:\Program Files\Teradata\Client\13.10\AXSMOD\;C:\Program Files\Teradata\Client\13.10\bin\;C:\Program Files\Teradata\Client\13.10\CLIv2\;C:\Program Files\Teradata\Client\13.10\ODBC Driver for Teradata\Lib;C:\Program Files\Teradata\Client\13.10\Shared ICU Libraries for Teradata\lib\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\DMAbout\Perl\c\bin;D:\DMAbout\Perl\perl\site\bin;D:\DMAbout\Perl\perl\bin;C:\Program Files\Dell\Dell Data Protection\Encryption\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\SoftWare\NormalTools\Bower\;D:\DMAbout\SVN SoftWare\bin;D:\DMAbout\Oracle Client\instantclient_11_2;D:\DMAbout\plsql\instantclient_11_2;E:/apache-ant-1.9.5/bin;E:/mongodb/bin;E:\Web\Groovy\groovy-sdk-2.4.5\bin;E:\Web\Groovy\groovy-sdk-2.4.5\bin;C:\ProgramFiles\Calibre2\;E:\Web\Maven\apache-maven-3.2.1\bin;E:\Web\redis\redis-2.6\bin\release;F:\nginx\nginx-1.10.1;F:\scala\bin;F:\Java\jdk1.8.0_144\lib;F:\Java\jdk1.8.0_144\lib\tools.jar;F:\springboot\spring_1.5.6\bin;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 (6.1.7601.23775)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 3591644k(405268k free), swap 9553452k(1237964k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.144-b01) for windows-x86 JRE (1.8.0_144-b01), built on Jul 21 2017 21:58:05 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Apr 18 14:31:54 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
