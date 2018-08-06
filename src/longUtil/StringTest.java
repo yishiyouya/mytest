@@ -10,6 +10,7 @@ import java.time.chrono.ThaiBuddhistChronology;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.Set;
 
 import com.pactera.sms.foundbase.util.SecurityUtil;
@@ -19,7 +20,15 @@ import com.pactera.sms.foundbase.util.SecurityUtil;
 public class StringTest {
 
 	public static void main(String[] args) {
-		strDate();
+		strInput();
+	}
+	
+	public static void strInput() {
+		Scanner scan = new Scanner(System.in);
+		String inp = scan.nextLine();
+		
+		System.out.println(inp);
+		
 	}
 	
 	public static void strDate() {
