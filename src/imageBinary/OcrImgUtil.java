@@ -39,6 +39,7 @@ public class OcrImgUtil {
     	String binStr = "";
     	jpgN = "F:\\File\\国寿电商\\task\\身份证统一管理\\ott141132.jpg";
     	jpgN = "F:\\File\\国寿电商\\task\\身份证统一管理\\yg172423.jpg";
+    	jpgN = "F:\\File\\国寿电商\\task\\身份证统一管理\\ott141132.jpg";
 
     	binStr = getImageBinary(jpgN);
     	//ocr识别

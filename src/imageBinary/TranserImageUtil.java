@@ -31,13 +31,14 @@ public class TranserImageUtil {
     	jpgN = "F:\\File\\国寿电商\\task\\身份证统一管理\\xuanye.jpg";
     	jpgN = "F:\\File\\国寿电商\\task\\身份证统一管理\\ot141132.jpg";
     	jpgN = "F:\\File\\国寿电商\\task\\身份证统一管理\\zmgq45841.jpg";
-
+    	jpgN = "F:\\File\\国寿电商\\task\\身份证统一管理\\ott141132.jpg";
+    	
     	//binStr = getImageBinary(pngP);
     	//binStr = getImageBinary(bankN);
     	binStr = getImageBinary(jpgN);
     	//ocr识别
     	//HttpClientApache.callOcr(binStr);
-    	AESDemoImg.encryImg(binStr, 0);//0 正面 1反面 2下载
+    	AESDemoImg.encryImg(binStr, 1);//0 正面 1反面 2下载
     	//System.out.println(binStr);
         //base64StringToImage(binStr);   
     }   
