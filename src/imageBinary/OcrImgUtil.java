@@ -31,6 +31,11 @@ import sun.misc.BASE64Encoder;
 
 public class OcrImgUtil {
 
+    private final static String OCR_ONLINE_URL = "http://cloud.exocr.com/recognize";
+	private final static String OCR_FORM_URL = "http://10.28.37.85:9999/recognize";
+	private final static String OCR_TEST_URL = "http://10.28.13.3:9090/exocr/recognize";
+			
+			
     static BASE64Encoder encoder = new sun.misc.BASE64Encoder();   
     static BASE64Decoder decoder = new sun.misc.BASE64Decoder();   
        
@@ -43,7 +48,7 @@ public class OcrImgUtil {
 
     	binStr = getImageBinary(jpgN);
     	//ocr识别
-    	callOcr(binStr);
+    	callOcr(binStr, OCR_TEST_URL);
     }   
     
     /**
@@ -75,9 +80,9 @@ public class OcrImgUtil {
        
     
     
-    public static void callOcr(String imgBina) {
+    public static void callOcr(String imgBina, String ocrUrl) {
 		String url = "";
-		url = "http://10.28.13.3:9090/exocr/recognize";//form
+		url = ocrUrl;
 		Map<String, String> paramMap = new HashMap<String,String>();
 		paramMap.put("username", "test");
 		paramMap.put("password", "test");
