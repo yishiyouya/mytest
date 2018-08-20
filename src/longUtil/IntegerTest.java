@@ -1,10 +1,18 @@
 package longUtil;
 
+import java.util.UUID;
+
 public class IntegerTest {
 	private static int i = 4;
 	public static void main(String[] args) {
-		leftMoveBit();
+		getUUID();
 	}
+	
+	public static void getUUID() {
+		String uUString = UUID.randomUUID().toString();
+		System.out.println(uUString);
+	}
+	
 	
 	public static void leftMoveBit() {
 		int COUNT_BITS = Integer.SIZE - 3;

@@ -1,15 +1,26 @@
 package longUtil;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DateTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		dateForNoMonZero();
+		jdk8CurTimeStamp();
 	}
 
+	
+	public static void jdk8CurTimeStamp() {
+		LocalDateTime now = LocalDateTime.now();
+		String curTimeStamp = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:SS"));
+		Timestamp timestamp = Timestamp.valueOf(curTimeStamp);
+		System.out.println(timestamp);
+	}
+	
 	public static void dateForNoMonZero() {
 		String date = "2018-02-02";
 	      int index1 =date.indexOf("-");
