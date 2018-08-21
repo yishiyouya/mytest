@@ -9,7 +9,7 @@ public class IntegerTest {
 	}
 	
 	public static void getUUID() {
-		String uUString = UUID.randomUUID().toString();
+		String uUString = UUID.randomUUID().toString().replaceAll("-", "");
 		System.out.println(uUString);
 	}
 	
