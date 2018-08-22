@@ -9,8 +9,8 @@ public class TestEnum {
 
 	public static void existEnum() {
 		String string = "y";
-		String res = EnumT.existV(string);
-		System.out.println(res);
+		String resE = EnumT.existV(string);
+		System.out.println(resE);
 	}
 	
 	public static void valueEnum() {
